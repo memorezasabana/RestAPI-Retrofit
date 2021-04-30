@@ -2,32 +2,34 @@ package com.ozzamo.movieproject;
 
 import java.util.List;
 
+import com.google.gson.annotations.SerializedName;
+
 public class MovieResponse {
-	private String response;
-	private String totalResults;
-	private List<SearchItem> search;
+    @SerializedName("Response")
+    private String response;
+    @SerializedName("totalResults")
+    private String totalResults;
+    @SerializedName("Search")
+    private List<SearchItem> search;
 
-	public void setResponse(String response){
-		this.response = response;
-	}
 
-	public String getResponse(){
-		return response;
-	}
+    public String getResponse() {
+        return response;
+    }
 
-	public void setTotalResults(String totalResults){
-		this.totalResults = totalResults;
-	}
+    public void setTotalResults(String totalResults) {
+        this.totalResults = totalResults;
+    }
 
-	public String getTotalResults(){
-		return totalResults;
-	}
+    public String getTotalResults() {
+        return totalResults;
+    }
 
-	public void setSearch(List<SearchItem> search){
-		this.search = search;
-	}
+    public void setSearch(List<SearchItem> search) {
+        this.search = search;
+    }
 
-	public List<SearchItem> getSearch(){
-		return search;
-	}
+    public List<SearchItem> getSearch() {
+        return search;
+    }
 }
